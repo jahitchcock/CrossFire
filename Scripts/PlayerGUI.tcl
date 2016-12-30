@@ -124,7 +124,7 @@ proc Game::Create {name numRealms {mode Online}} {
         -wrap none -cursor {} -takefocus 0
     set tbw $hf.list.t
     $tbw tag configure cardTypeHeader \
-        -font "[lindex [$tbw configure -font] 3] bold"
+        -font "[lindex [$tbw configure -font] 3]"
     $tbw tag configure select -foreground white -background blue
     set gameConfig($w,hand) $tbw
     lappend gameConfig($w,textBoxes) $gameConfig($w,hand)
@@ -195,7 +195,7 @@ proc Game::Create {name numRealms {mode Online}} {
         -wrap none -cursor {} -takefocus 0
     set tbw $pf.list.t
     $tbw tag configure champion \
-	-font "[lindex [$tbw configure -font] 3] bold"
+	-font "[lindex [$tbw configure -font] 3]"
     $tbw tag configure select -foreground white -background blue
     $tbw tag configure hidden -foreground black -background grey
     set gameConfig($w,pool) $tbw
@@ -1160,7 +1160,7 @@ proc Game::CreateOpponent {pw name numRealms key} {
     set tbw $hf.bottom.pool.list.t
     set gameConfig($w,pool) $tbw
     lappend gameConfig($w,textBoxes) $gameConfig($w,pool)
-    $tbw tag configure champion -font "[lindex [$tbw configure -font] 3] bold"
+    $tbw tag configure champion -font "[lindex [$tbw configure -font] 3]"
     $tbw tag configure select -foreground white -background blue
     scrollbar $hf.bottom.pool.list.sb -command "$tbw yview"
     grid $hf.bottom.pool.list.t -sticky nsew

@@ -762,9 +762,9 @@ proc Game::AddWarPane {w name which} {
         -yscrollcommand "CrossFire::SetScrollBar $f.f.cards.sb" \
         -wrap none -cursor {} -takefocus 0
     set tbw $f.f.cards.t
-    $tbw tag configure champion -font "[lindex [$tbw configure -font] 3] bold"
+    $tbw tag configure champion -font "[lindex [$tbw configure -font] 3]"
     $tbw tag configure event -foreground red \
-        -font "[lindex [$tbw configure -font] 3] bold"
+        -font "[lindex [$tbw configure -font] 3] "
     $tbw tag configure select -foreground white -background blue
     set gameConfig($w,battlefield) $tbw
     lappend gameConfig($w,textBoxes) $tbw

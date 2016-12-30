@@ -604,7 +604,7 @@ proc Chat::CreateChatRoom {} {
     # coded default and use it.
     set chatConfig(fontNormal) \
         [lindex [$chatConfig(realmTextBox) configure -font] 3]
-    set chatConfig(fontBold) "$chatConfig(fontNormal) bold"
+    set chatConfig(fontBold) "$chatConfig(fontNormal)"
     $chatConfig(realmTextBox) tag configure select \
         -foreground white -background blue
     scrollbar $ip1.realms.list.sb \
